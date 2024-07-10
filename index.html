@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="start-screen">
+            <h1 class="heading">Quiz App</h1>
+            <div class="form">
+                <label for="num">Number of questions: </label>
+                <select id="num">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                </select>
+
+                <label for="category">Select Category: </label>
+                <select id="category">
+                    <option value="19">Aptitude</option>
+                    <option value="10">Verbal</option>
+                    <option value="18" data-coding="cpp">Coding - C++</option>
+                    <option value="18" data-coding="java">Coding - Java</option>
+                    <option value="18" data-coding="dsa">Coding - DSA</option>
+                    <option value="11">Operating System</option>
+                    <option value="12">Computer Networking</option>
+                    <option value="13">DBMS</option>
+                </select>
+
+                <label for="difficulty">Select Difficulty: </label>
+                <select id="difficulty">
+                    <option value="">Any Difficulty</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <label for="time">Select time per question:</label>
+                <select id="time">
+                    <option value="10">10 seconds</option>
+                    <option value="15">15 seconds</option>
+                    <option value="20">20 seconds</option>
+                    <option value="25">25 seconds</option>
+                    <option value="30">30 seconds</option>
+                    <option value="60">60 seconds</option>
+                </select>
+            </div>
+            <button class="btn start">Start Quiz</button>
+        </div>
+
+        <div class="quiz hide">
+            <div class="timer">
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                    <span class="progress-text"></span>
+                </div>
+            </div>
+
+            <div class="question-wrapper">
+                <div class="number">
+                    Question <span class="current">1</span>
+                    <span class="total">/10</span>
+                </div>
+                <div class="question">This is a question?</div>
+            </div>
+
+            <div class="answers-wrapper">
+                <!-- Answers will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="end-screen hide">
+            <h1 class="heading">Quiz App</h1>
+            <div class="score">
+                <span class="score-text">Your score:</span>
+                <div>
+                    <span class="final-score">0</span>
+                    <span class="total-score">/10</span>
+                </div>
+                <div class="result-details">
+                    <p>Correct Answers: <span class="correct-score">0</span></p>
+                    <p>Incorrect Answers: <span class="incorrect-score">0</span></p>
+                    <p>Unanswered: <span class="unanswered-score">0</span></p>
+                </div>
+            </div>
+            <button class="btn restart">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
